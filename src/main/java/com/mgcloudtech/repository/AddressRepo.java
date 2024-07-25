@@ -13,7 +13,9 @@ import java.util.Optional;
 public interface AddressRepo extends JpaRepository<Address,Integer> {
         @Modifying
         @Transactional
-        @Query("UPDATE Address a SET a.streetAddress = :streetAddress, a.city = :city,a.state = :state, a.zipcode = :zipcode WHERE a.addressId = :addressId")
-        void updateAddress(@Param("addressId") Integer id, @Param("streetAddress") String streetAddress, @Param("city") String city,@Param("state") String state, @Param("zipcode") Integer zipcode);
+
+
+        @Query("UPDATE Address a SET a.streetAddress = :streetAddress, a.city = :city,a.state = :state, a.zipcode = :zipcode, a.updateBy = :updateBy WHERE a.addressId = :addressId")
+        void updateAddress(@Param("addressId") Integer id, @Param("streetAddress") String streetAddress, @Param("city") String city,@Param("state") String state, @Param("zipcode") Integer zipcode, @Param("updateBy") String updateBy);
     }
 

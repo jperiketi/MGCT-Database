@@ -22,7 +22,7 @@ public class AddressService {
     public void updateAddress(Integer addressId, Address address) {
         addressRepo.updateAddress(addressId,
                 address.getStreetAddress(), address.getCity(),
-                address.getState(), address.getZipcode());
+                address.getState(), address.getZipcode(),address.getUpdateBy());
     }
 
 }

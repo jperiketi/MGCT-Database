@@ -3,7 +3,6 @@ package com.mgcloudtech.controller;
 
 
 import com.mgcloudtech.entities.Address;
-import com.mgcloudtech.entities.Employee;
 import com.mgcloudtech.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/employee")
+@RequestMapping("/address")
 public class AddressController {
 
     @Autowired
